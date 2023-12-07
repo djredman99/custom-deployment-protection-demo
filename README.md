@@ -71,6 +71,7 @@ To demostrate:
 ```
   python3 set-deployment-state.py
 ```
+**NOTE** I have had issues with the _exp_ value of the JWT payload (which is the requested expiration of the token).  I feel like the server responding to me had a clock that was out-of-sync and I had to artifically inflate the expiration to a time 54k seconds ahead.  Look for an error response that is sugessting your exp value "must be a date in the future".
 
 The script will run and do the following:
 - Get a JWT token for your GitHub App so that it can access the API
