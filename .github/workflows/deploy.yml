@@ -2,6 +2,11 @@ name: Multi-Enviroment Deploy
 
 on:
   workflow_dispatch:
+    inputs:
+      name:
+        type: text
+        description: Name
+        default: World
 
 jobs:
   deploy-dev:
